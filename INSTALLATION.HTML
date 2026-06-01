@@ -17,7 +17,7 @@
                 position: sticky;
                 top: 0;
                 background: white;
-                 z-index: 1000;
+                z-index: 1000;
                 
             }
             .innerheader{
@@ -94,7 +94,39 @@
                 
             
             }
+
+            .modal {
+                 display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+            }
+
+            .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
         </style>
+
+        <script>
+        function openModal(img) {
+         document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = img.src;
+            }
+
+        function closeModal() {
+         document.getElementById("modal").style.display = "none";
+        }
+        </script>
 
     </head>
 
@@ -115,28 +147,28 @@
             </div>
         </div>
        <div class="wrapper">
-            <img class="images" src="images/installtion/i2.webp">
+            <img class="images" src="images/installtion/i2.webp" onclick="openModal(this)">
             <p>Horse Girl Window, Darlings Gallery 2023</p>
-            <img class="images" src="images/installtion/alternatum-3.JPG">
+            <img class="images" src="images/installtion/alternatum-3.JPG" onclick="openModal(this)">
             <p> <a href="https://youtu.be/-Oh5wI1aRds" target="_blank">Alternatum, Bankstown Arts Center 2026</a></p>
             
-            <img class="images" src="images/installtion/i3.webp">
+            <img class="images" src="images/installtion/i3.webp" onclick="openModal(this)">
             <p>Those Stubborn and Romantic People, Puzzle Gallery 2024</p>
-            <img class="images" src="images/installtion/i4.webp">
+            <img class="images" src="images/installtion/i4.webp" onclick="openModal(this)">
             <p>Mahjong, Blank Gallery 2024 </p>
-            <img class="images" src="images/installtion/i5.webp">
+            <img class="images" src="images/installtion/i5.webp" onclick="openModal(this)">
             <p>Public Image, Puzzle Gallery 2023</p>
-            <img class="images" src="images/installtion/i1.jpg">
+            <img class="images" src="images/installtion/i1.jpg" onclick="openModal(this)">
             <p>Amaranth, Puzzle Gallery 2024</p>
-            <img class="images" src="images/installtion/i7.webp">
+            <img class="images" src="images/installtion/i7.webp" onclick="openModal(this)">
             <p>Red Carpet and Two Champaign Glasses 2021</p>
-            <img class="images" src="images/installtion/i9.webp">
+            <img class="images" src="images/installtion/i9.webp" onclick="openModal(this)">
             <p>Words are for those with promises to keep 2024</p>
-            <img class="images" src="images/installtion/i10.jpg">
+            <img class="images" src="images/installtion/i10.jpg" onclick="openModal(this)">
             <p>Horse Girl Window, Tai Art Gallery 2025</p>
-            <img class="images" src="images/installtion/i6.webp">
+            <img class="images" src="images/installtion/i6.webp" onclick="openModal(this)">
             <p>Bubble, Foam, Orange Car 2023</p>
-            <img class="images" src="images/installtion/i8.webp">
+            <img class="images" src="images/installtion/i8.webp" onclick="openModal(this)">
             <p>Smoke, AirSpace 2023</p>
             
             
@@ -144,5 +176,9 @@
             
         
        </div>
+
+       <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+        </div>
     </body>
 </html>

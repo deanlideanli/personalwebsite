@@ -94,7 +94,41 @@
                 
             
             }
+
+            .modal {
+                 display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+            }
+
+            .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            }
         </style>
+
+         <script>
+        function openModal(img) {
+         document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = img.src;
+            }
+
+        function closeModal() {
+         document.getElementById("modal").style.display = "none";
+        }
+        </script>
+
 
     </head>
 
@@ -115,22 +149,22 @@
             </div>
         </div>
        <div class="wrapper">
-            <img class="images" src="images/portrait/img20230708_22075195.jpg">
-            <img class="images" src="images/portrait/img20240923_17175229.jpg">
-            <img class="images" src="images/portrait/img20240923_17292159.jpg">
-            <img class="images" src="images/portrait/img20240923_17345861.jpg">
-            <img class="images" src="images/portrait/img20240923_17402137.jpg">
-            <img class="images" src="images/portrait/img20240928_15173778.jpg">
-            <img class="images" src="images/portrait/img20240930_16465164.jpg">
-            <img class="images" src="images/portrait/img20241013_11123077.jpg">
-            <img class="images" src="images/portrait/img20241014_16295715.jpg">
-            <img class="images" src="images/portrait/img20241018_21173509.jpg">
-            <img class="images" src="images/portrait/img20241018_21205364.jpg">
-            <img class="images" src="images/portrait/img20241018_21235410.jpg">
-            <img class="images" src="images/portrait/NatashaWalsh20230705_13401439.jpg">
-            <img class="images" src="images/portrait/2021-06-05-0027.webp">
-            <img class="images" src="images/portrait/band1.webp">
-            <img class="images" src="images/portrait/ct2.webp">
+            <img class="images" src="images/portrait/img20230708_22075195.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240923_17175229.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240923_17292159.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240923_17345861.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240923_17402137.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240928_15173778.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20240930_16465164.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20241013_11123077.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20241014_16295715.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20241018_21173509.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20241018_21205364.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/img20241018_21235410.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/NatashaWalsh20230705_13401439.jpg" onclick="openModal(this)">
+            <img class="images" src="images/portrait/2021-06-05-0027.webp" onclick="openModal(this)">
+            <img class="images" src="images/portrait/band1.webp" onclick="openModal(this)">
+            <img class="images" src="images/portrait/ct2.webp" onclick="openModal(this)">
             
             
             
@@ -139,5 +173,9 @@
             
         
        </div>
+
+       <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+        </div>
     </body>
 </html>

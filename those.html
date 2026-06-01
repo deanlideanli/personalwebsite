@@ -90,8 +90,39 @@
                 display: block;
                 margin-bottom: 10px;
             }
-        </style>
 
+            .modal {
+                 display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+            }
+
+            .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            }
+        </style>
+        <script>
+        function openModal(img) {
+         document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = img.src;
+            }
+
+        function closeModal() {
+         document.getElementById("modal").style.display = "none";
+        }
+        </script>
     </head>
 
     <body>
@@ -111,7 +142,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <img class="images" src="images/those/tsarp-1.webp" alt="">
+            <img class="images" src="images/those/tsarp-1.webp" onclick="openModal(this)"alt="Installation view of Those Romantic and Stubborn People, 2024">
             <h1>THOSE STUBBORN AND ROMANTIC PEOPLE </h1>
             <h2>2024</h2>
             
@@ -124,29 +155,31 @@
                 In his latest collection of photographic works, Li has brought together a menagerie of glimpses, each plucked from the routines of those closest to him. When siloed, these windows into the lives of friends, fellow artists, and loved ones serve as speculative entry points into individual existences, connected, it seems, only by Li and his camera. However, brought together, not only as images on walls but as alluring points of curiosity, Li’s works duplicate his own sense of community and camaraderie, inviting everyone to join his gathering of those stubborn and romantic people.
             </p>
             <p>--- Gregory Uzelac </p>
-            <img class="images" src="images/those/tsarp-2.webp">
-            <img class="images" src="images/those/tsarp-3.webp">
-            <img class="images" src="images/those/tsarp-4.webp">
-            <img class="images" src="images/those/tsarp-5.webp">
-            <img class="images" src="images/those/tsarp-6.webp">
-            <img class="images" src="images/those/tsarp-7.webp">
-            <img class="images" src="images/those/tsarp-8.webp">
-            <img class="images" src="images/those/tsarp-9.webp">
-            <img class="images" src="images/those/tsarp-10.webp">
-            <img class="images" src="images/those/tsarp-11.webp">
-            <img class="images" src="images/those/tsarp-12.webp">
-            <img class="images" src="images/those/tsarp-13.webp">
-            <img class="images" src="images/those/tsarp-14.webp">
-            <img class="images" src="images/those/tsarp-15.webp">
-            <img class="images" src="images/those/tsarp-16.webp">
-            <img class="images" src="images/those/tsarp-17.webp">
-            <img class="images" src="images/those/tsarp-18.webp">
+            <img class="images" src="images/those/tsarp-2.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-3.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-4.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-5.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-6.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-7.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-8.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-9.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-10.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-11.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-12.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-13.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-14.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-15.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-16.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-17.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
+            <img class="images" src="images/those/tsarp-18.webp" onclick="openModal(this)" alt="Installation view of Those Romantic and Stubborn People, 2024">
            
             
         </div>
 
 
-        
+        <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+        </div>
 
     </body>
 </html>

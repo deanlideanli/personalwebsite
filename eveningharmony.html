@@ -97,7 +97,40 @@
                 display: block;
                 margin-bottom: 10px;
             }
+
+            .modal {
+                 display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+            }
+
+            .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            }
         </style>
+       
+       <script>
+        function openModal(img) {
+         document.getElementById("modal").style.display = "block";
+        document.getElementById("modal-img").src = img.src;
+            }
+
+        function closeModal() {
+         document.getElementById("modal").style.display = "none";
+        }
+        </script>
 
     </head>
 
@@ -118,7 +151,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <img class="images" src="images/evening harmony/fd-3.webp" alt="everning harmony">
+            <img class="images" src="images/evening harmony/fd-3.webp" onclick="openModal(this)" alt="everning harmony">
             <h1>Evening Harmony</h1>
             <h2>A collaboration with Zi Qin and Jingcheng Deng at FIRSTDRAFT</h2>
             <h3>2025</h3>
@@ -139,19 +172,21 @@
                 The making of Li, Qin, and Deng honours their own recounted experiences in truthful fragment and sensation. The ambiguity of their work is generous and allows us to insert our memories, tentatively and fondly, into theirs. Our imaginations are bolstered and their value is endorsed as we are granted the permission, finally, to play. 
             </p>
             <p>--- A Languid Vertigo by Anthea Duffy</p>
-            <img class="images" src="images/evening harmony/fd-7.webp">
-            <img class="images" src="images/evening harmony/fd-8.webp">
-            <img class="images" src="images/evening harmony/fd-9.webp">
-            <img class="images" src="images/evening harmony/fd-12.webp">
-            <img class="images" src="images/evening harmony/fd-11.webp">
-            <img class="images" src="images/evening harmony/fd-19.webp">
-            <img class="images" src="images/evening harmony/fd-25.webp">
-            <img class="images" src="images/evening harmony/fd-43.webp">
-            <img class="images" src="images/evening harmony/fd.webp">
+            <img class="images" src="images/evening harmony/fd-7.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-8.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-9.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-12.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-11.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-19.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-25.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd-43.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
+            <img class="images" src="images/evening harmony/fd.webp" onclick="openModal(this)" alt="Installation view of Evening Harmony, 2025">
         </div>
 
 
-        
+        <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+</div>
 
     </body>
 </html>
